@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>سایت خبری بازی‌ها</title>
-  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
   <header>
     <h1> آخرین اخبار بازی‌ها</h1>
+    <link rel="stylesheet" href="style.css">
+    <button class="login-btn" onclick="openLogin()">ورود</button>
     <nav>
       <a href="#">خانه</a>
       <a href="#">به‌روزرسانی‌ها</a>
+      <a href="about.html" target="_blank">درباره ما</a>
       <a href="#">تماس با ما</a>
     </nav>
   </header>
+
   <main>
     <div class="news">
       <img src="Cs2_dust2.webp" alt="CS2 update">
@@ -37,10 +41,29 @@
       <a href="#" class="btn">ادامه مطلب</a>
     </div>
   </main>
-
   <footer>
-    <p> - سایت خبری من </p>
+    <p>سایت خبری من</p>
   </footer>
+
+  
+  <div class="login-popup" id="loginPopup">
+    <div class="login-box">
+      <h3>ورود به سایت</h3>
+      <input type="text" placeholder="نام کاربری"><br>
+      <input type="password" placeholder="رمز عبور"><br>
+      <button onclick="closeLogin()">ورود</button><br>
+      <button onclick="closeLogin()">بستن</button>
+    </div>
+  </div>
+
+  <script>
+    function openLogin() {
+      document.getElementById("loginPopup").style.display = "flex";
+    }
+    function closeLogin() {
+      document.getElementById("loginPopup").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
